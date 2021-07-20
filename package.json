@@ -1,6 +1,6 @@
 {
   "name": "sg-carplate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple npm library to validate and generates singapore carplate number",
   "author": "markeyys",
   "license": "MIT",
