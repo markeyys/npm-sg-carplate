@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "prepublish": "tsc --incremental false",
-    "compile": "tsc --noEmit && eslint --ext .ts",
+    "compile": "tsc --noEmit && eslint . --ext .ts",
     "test": "jest",
     "test_coverage": "jest --collectCoverage",
     "clear_jest": "jest --clearCache",
@@ -23,7 +23,7 @@
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^26.0.24",
-    "@typescript-eslint/eslint-plugin": "^3.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.28.4",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",

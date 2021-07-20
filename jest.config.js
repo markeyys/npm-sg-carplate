@@ -1,7 +1,9 @@
-export const roots = ['<rootDir>/tests'];
-export const setupFilesAfterEnv = ['./jest.setup.js'];
-export const testEnvironment = 'node';
-export const transform = {
-  '^.+\\.tsx?$': 'ts-jest'
+module.exports = {
+  roots: ['<rootDir>/tests'],
+  setupFilesAfterEnv: ['./jest.setup.js'],
+  testEnvironment: 'node',
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest'
+  },
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$'
 };
-export const testRegex = '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$';
