@@ -7,9 +7,7 @@ export function generate(): string {
   const prefixArray: number[] = Array.from(prefixAndPlateNum.slice(1, 3)).map(
     p => p.toLowerCase().charCodeAt(0) - 97 + 1
   );
-  const plateNumArray: number[] = prefixArray.concat(
-    Array.from(prefixAndPlateNum.slice(3, prefixAndPlateNum.length)).map(Number)
-  );
+  const plateNumArray: number[] = [...prefixArray, ... Array.from(prefixAndPlateNum.slice(3, prefixAndPlateNum.length)).map(Number)];
   const suffix: string = Suffix[addPrefixAndCenterPlateNum(plateNumArray) % 19];
   return prefixAndPlateNum.concat(suffix);
 }

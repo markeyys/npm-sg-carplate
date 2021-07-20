@@ -34,9 +34,7 @@ function validatedFields(carplateNumberArray: string[]): boolean {
 
 function updateCenterPlateNumber(centerPlateNumber: string): string {
   if (centerPlateNumber.length < 4) {
-    for (let i = centerPlateNumber.length; i < 4; i++) {
-      centerPlateNumber = '0' + centerPlateNumber;
-    }
+    while (centerPlateNumber.length < 4) centerPlateNumber = '0' + centerPlateNumber;
   }
   return centerPlateNumber;
 }
@@ -55,7 +53,7 @@ function checkSum(prefix: string, centerPlateNumber: string, suffix: string): bo
   const prefixToLowerCase = prefix.toLowerCase();
   const prefixArray: number[] = Array.from(prefixToLowerCase).map(p => p.toLowerCase().charCodeAt(0) - 97 + 1);
   const centerCarPlateNumArray: number[] = Array.from(centerPlateNumber).map(Number);
-  const prefixAndCenterNumArray = prefixArray.concat(centerCarPlateNumArray);
+  const prefixAndCenterNumArray = [...prefixArray, ...centerCarPlateNumArray];
   if (prefixAndCenterNumArray.length != 6) {
     return false;
   }
