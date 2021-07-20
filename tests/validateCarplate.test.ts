@@ -1,5 +1,5 @@
 import { validate } from '../src/validateCarplate';
-import { invalidCarplate, validCarplate } from './CarplateSamples';
+import { invalidCarplate, validCarplate } from './carplateSamples';
 describe('validate Carplate', () => {
   test('Valid Carplate', async () => {
     validCarplate.forEach(it => expect(validate(it)).toBeTruthy());
