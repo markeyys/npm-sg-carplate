@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "prepublish": "tsc --incremental false",
-    "compile": "tsc --noEmit && eslint . --ext .ts",
+    "compile": "tsc --noEmit && eslint --ext .ts",
     "test": "jest",
     "test_coverage": "jest --collectCoverage",
     "clear_jest": "jest --clearCache",
